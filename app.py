@@ -44,6 +44,7 @@ def upload_image():
         flash('No file part')
         return redirect(request.url)
     file = request.files['file']
+    num = request.form['num']
     if file.filename == '':
         flash('No image selected for uploading')
         return redirect(request.url)
@@ -60,7 +61,8 @@ def upload_image():
         VGG_model  = 'vgg19'  # model type
         pick_layer = 'avg'    # extract feature of this layer
         d_type     = 'd1'     # distance type
-        depth      = 8
+        depth      = int(num)
+        print(num)
         #end config 
         query_idx = 0
         query = {'img': None, 'cls': None, 'hist': None}
