@@ -12,7 +12,6 @@ click==8.1.7
 colorama==0.4.6
 contourpy==1.2.0
 cycler==0.12.1
-Django==5.0.2
 dm-tree==0.1.8
 filelock==3.13.4
 Flask==3.0.2
